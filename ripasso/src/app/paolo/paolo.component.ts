@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Message } from '../messaggio.model';
 
 @Component({
   selector: 'app-paolo',
@@ -6,7 +7,13 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./paolo.component.css']
 })
 export class PaoloComponent {
-  @Input() messaggioRicevuto : String = "";
+  @Input() messaggioRicevuto !: Message;
 
+  like() {
+    this.messaggioRicevuto.voteUp()
+  }
 
+  dislike() {
+    this.messaggioRicevuto.voteDown()
+  }
 }

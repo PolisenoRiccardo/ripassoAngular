@@ -1,1 +1,7 @@
-<div>{{this.messaggioRicevuto}}</div>
+
+    <div style="display: inline-block;">{{this.messaggioRicevuto.mittente}} : {{this.messaggioRicevuto.corpo}} 
+        <button (click)="like()">👍</button>
+        <button (click)="dislike()">👎</button>
+    </div>
+
+    <div style="display: inline-block;" class="likeDiv">{{this.messaggioRicevuto.likes}} ⭐</div>

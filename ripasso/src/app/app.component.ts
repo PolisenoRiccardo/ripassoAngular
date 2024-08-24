@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Message } from './messaggio.model';
 
 @Component({
   selector: 'app-root',
@@ -6,10 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  chat : Array<string> = ["Paolo: Sono il componente Paolo",]
+  chat : Array<Message> = [new Message("Paolo"," sono il componente Paolo")]
   constructor(){}
 
-  invioMessaggio(saluto: HTMLInputElement): void {
-    this.chat.push("Tu:" + saluto.value)
+  invioMessaggio(Mittente:HTMLInputElement, saluto: HTMLInputElement): void {
+    this.chat.push(new Message(Mittente.value ,saluto.value))
   }
 }

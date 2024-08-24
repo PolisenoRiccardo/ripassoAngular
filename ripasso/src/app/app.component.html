@@ -1,10 +1,16 @@
 <h1>Valle del ripasso</h1>
 <p>L'estate mi fonde il cervello e ho dimenticato chi sono.</p>
-<label for="saluto">Saluta Paolo</label><br>
+
+<label for="mittente">Mittente:</label><br>
+<input type="text" name="mittente" #mittente><br><br>
+
+<label for="saluto">Testo:</label><br>
 <input type="text" name="saluto" #saluto>
-<button (click)="invioMessaggio(saluto)">Invia</button>
+
+<button (click)="invioMessaggio(mittente, saluto)">Invia</button>
+
 <div class="chatGrafica">
-<div *ngFor="let messaggio of chat" class="bordo">
-  <app-paolo [messaggioRicevuto] = "messaggio"></app-paolo>
-</div>
+  <div *ngFor="let messaggio of chat" class="bordo">
+    <app-paolo [messaggioRicevuto] = "messaggio"></app-paolo>
+  </div>
 </div>
