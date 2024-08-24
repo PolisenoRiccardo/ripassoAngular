@@ -1,0 +1,6 @@
+<h1>Valle del ripasso</h1>
+<p>L'estate mi fonde il cervello e ho dimenticato chi sono.</p>
+<label for="saluto">Saluta Paolo</label><br>
+<input type="text" name="saluto" #saluto>
+<button (click)="invioMessaggio(saluto)">Invia</button>
+<app-paolo [messaggioRicevuto] = "messaggio"></app-paolo>
