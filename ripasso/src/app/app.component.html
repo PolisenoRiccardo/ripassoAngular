@@ -3,4 +3,8 @@
 <label for="saluto">Saluta Paolo</label><br>
 <input type="text" name="saluto" #saluto>
 <button (click)="invioMessaggio(saluto)">Invia</button>
-<app-paolo [messaggioRicevuto] = "messaggio"></app-paolo>
+<div class="chatGrafica">
+<div *ngFor="let messaggio of chat" class="bordo">
+  <app-paolo [messaggioRicevuto] = "messaggio"></app-paolo>
+</div>
+</div>

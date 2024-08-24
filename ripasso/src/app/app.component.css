@@ -1,0 +1,12 @@
+.bordo {
+    border: 1px solid black;
+    width: fit-content;
+    margin-bottom: 4%;
+}
+
+.chatGrafica {
+    border: 1px solid black;
+    width: fit-content;
+    margin-top: 4%;
+    padding: 10px;
+}

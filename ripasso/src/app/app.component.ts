@@ -6,11 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  messaggio !: String;
-
+  chat : Array<string> = ["Paolo: Sono il componente Paolo",]
   constructor(){}
 
   invioMessaggio(saluto: HTMLInputElement): void {
-    this.messaggio = saluto.value
+    this.chat.push("Tu:" + saluto.value)
   }
 }
